@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
+import Navbar from './Navbar';
+import Diary from './Diary';
+import Create from './Create';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import DiaryContent from './DiaryContent';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route element={<Home />} path={'/'}></Route>
+          <Route element={<Diary />} path={'/diary'}></Route>
+          <Route element={<Create />} path={'/new-diary'}></Route>
+          <Route element={<DiaryContent />} path={'/diary-content/:id'}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
