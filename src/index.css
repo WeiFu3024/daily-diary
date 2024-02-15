@@ -64,10 +64,14 @@
 }
 
 .diary-content {
-  margin: 2rem;
+  margin: 2rem auto; /* Adjust margin for top and bottom spacing */
   font-size: large;
   text-align: left;
-  padding-left: 60px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Align content to the center horizontally */
+  flex-direction: column; /* Align content vertically */
+  max-width: 70%; /* Optionally limit the maximum width of the container */
+  white-space: pre-wrap; /* Preserve white space and wrap lines */
 }
 
 .diary-content h2 {
@@ -76,8 +80,9 @@
 
 .diary-content p {
   color: #333;
-  margin-bottom: 1rem;
-  padding-left: 40px;
+  padding-left: 60px;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  line-height: 1.4;
 }
 
 .diary-content button {
@@ -86,13 +91,20 @@
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
+  margin: 5px 5px; /* Adjust margin here */
+  margin-right: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .diary-content button:hover {
   background-color: #555;
 }
 
-.new-diary {
+.edit-diary {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -101,26 +113,27 @@
   border-radius: 5px;
 }
 
-.new-diary h2 {
+.edit-diary h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-.new-diary form {
+.edit-diary form {
   display: flex;
   flex-direction: column;
 }
 
-.new-diary select,
-.new-diary textarea {
+.edit-diary select,
+.edit-diary textarea {
   margin-bottom: 10px;
   padding: 5px;
   border-radius: 3px;
   border: 1px solid #ccc;
   font-size: 16px;
+  white-space: pre-wrap; /* Preserve white space and wrap lines */
 }
 
-.new-diary button {
+.edit-diary button {
   padding: 10px 20px;
   background-color: #555;
   color: #fff;

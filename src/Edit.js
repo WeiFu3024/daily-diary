@@ -1,41 +1,55 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import DateObject from 'react-date-object';
+import useFetch from "./useFetch";
 
-const Create = () => {
-    const [weather, setWeather] = useState('Sunny');
-    const [body, setBody] = useState(``);
-    const [plans, setPlans] = useState(``);
-    const date = new DateObject().format("YYYY-MM-DD");
+const Edit = () => {
+    const { id } = useParams();
     const navigate = useNavigate();
+    
+    const {data: diary, isPending, error} = useFetch('http://localhost:8000/diarys/' + id);
+    const [weather, setWeather] = useState("");
+    const [body, setBody] = useState("");
+    const [plans, setPlans] = useState("");
+    const [date, setDate] = useState("");
+    useEffect(() => {
+        if(diary) {
+            setWeather(diary.weather);
+            setBody(diary.body);
+            setPlans(diary.plans);
+            setDate(diary.date);
+        }
+    }, [diary]);
 
-    const handleSubmit = (e) => {
+    const handleEdit = (e) => {
         e.preventDefault();
         const diaryData = { body: body, date: date, weather: weather, plans: plans };
-        fetch('http://localhost:8000/diarys', {
-            method: 'POST',
+        fetch('http://localhost:8000/diarys/' + id, {
+            method: 'PATCH',
             body: JSON.stringify(diaryData)
         })
         .then(response => {
             if (!response.ok) {
-                throw new Error('Failed to add new diary');
+                throw new Error('Failed to edit diary');
             }
             return response.json();
         })
         .then(data => {
-            console.log('New diary added successfully:', data);
-            navigate('/');
+            console.log(' Diary changed successfully:', data);
+            navigate('/diary-content/' + id);
         })
         .catch(error => {
-            console.error('Error adding new diary:', error);
+            console.error('Error changing diary content:', error);
         });
     }
     
 
     return ( 
         <div className="edit-diary">
-            <h2>Add New Diary</h2>
-            <form onSubmit={ handleSubmit }>
+            <h2>Edit Diary</h2>
+            {isPending && <h2>Loading</h2>}
+            {error && <h2>{ error }</h2>}
+            {diary && <form onSubmit={ handleEdit }>
                 Weather: <select
                         required
                         value={weather}
@@ -58,10 +72,10 @@ const Create = () => {
                         value={plans}
                         onChange={ (e) => setPlans(e.target.value) }
                         ></textarea>
-                <button>Add New Diary</button>
-            </form>
+                <button>Edit diary</button>
+            </form>}
         </div>
      );
 }
  
-export default Create;
+export default Edit;
