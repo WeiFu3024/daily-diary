@@ -1,18 +1,25 @@
 {
   "diarys": [
     {
-      "id": "35c3",
-      "body": "Today is a great day. In the morning, I learned how to use React to build my first website, which you're currently seeing. Though I found some of the APIs challenging, I was able to overcome those obstacles. Additionally, I relied on chatGPT for assistance with the CSS aspects, as I haven't yet learned how to write a CSS file. In the evening, my family and I went to a restaurant to celebrate Valentine's Day, where we savored some delicious steaks.\n\nWill.",
-      "date": "2024-02-14",
-      "weather": "Cloudy",
-      "plans": "1. Practice guitar.\n2. Cut my Hair.\n3. Have a date at 5pm.\n4. Start to learn SQL."
+      "id": "3942",
+      "body": "Today was an absolutely gorgeous day. The weather was so delightful that I couldn't resist going for a leisurely stroll in the park. I cherished every moment as I basked in the warm, radiant sunshine that enveloped me.",
+      "date": "2024-02-13",
+      "weather": "Sunny",
+      "plans": "No special plans for the evening."
     },
     {
-      "id": "3531",
-      "body": "今天早上十點半起床，吃完早餐之後寫了新的 APP (Edit)，順便改了一下 CSS 的 Style，讓排版變比較好看一點。Call API 的時候還是有點小不順，希望之後可以越來越熟練。\n\n下午看了一下課程網，新的課程網真的超強的，修正了很多以前不方便的地方，但比較不爽的是不在選課時間沒辦法改預選課表。除了寫網頁的課之外，之後還想加軟體設計的課。也想修資管系的 SA&D 但卡到桌球了，應該要開學看有沒有辦法跑跑看加簽(煩)。\n\n看一看課就兩點了，只好沒吃飯就開始練吉他，不然太久沒練，今天找到一個新的練速度的方法，就是跟著歌的節拍彈音階。然後明天要繼續練，趕快跑順三個把位的簡化和弦。\n\n晚上跟子晴去聽音樂會，前面喝了羊肉湯又跑去逛南門市場，羊肉湯好喝。去國家音樂廳有夠緊張，感覺好像很多厲害的人，不過聽子晴說都是親友團。然後合唱團有夠屌，雖然我都聽不懂但真的有夠強，以前都覺得人聲就那樣，但堆疊加上迴響的效果讓聲音變得有層次，同時還是很清澈不含糊，還可以用不同的唱腔跟音域配置引導情緒，真的大開眼界。\n\n結束之後有記得送巧克力，好吃但太硬了。回家之後想寫日記但發現過了日期，只好新增選日期的功能，不過很簡單只是加個欄位，大概 10 分鐘就搞定了。總之是開心的一天。\n\nWill",
-      "date": "2024-02-15",
+      "id": "b7d6",
+      "body": "It's been gloomy all day. I stayed indoors and read a good book.",
+      "date": "2024-02-14",
       "weather": "Cloudy",
-      "plans": "今日未達成：\n1. 剪頭髮\n2. 學 SQL\n\n明日計畫：\n1. 完成沒完成的部分\n2. 看一下開學的課怎麼跑\n3. 練吉他\n4. 想一下鄉福分享怎麼辦\n5. 看一下久沒碰的 DSA"
+      "plans": "Meeting friends for dinner later tonight."
+    },
+    {
+      "id": "a894",
+      "body": "The rain hasn't stopped all day. I spent the afternoon listening to music and sipping hot tea.",
+      "date": "2024-02-15",
+      "weather": "Rainy",
+      "plans": "Watching a movie at home tonight."
     }
   ]
 }
