@@ -50,6 +50,7 @@ const Edit = () => {
             {isPending && <h2>Loading</h2>}
             {error && <h2>{ error }</h2>}
             {diary && <form onSubmit={ handleEdit }>
+                Date: <input type="date" value={date} onChange={ (e) => setDate(e.target.value) } />
                 Weather: <select
                         required
                         value={weather}

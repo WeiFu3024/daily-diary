@@ -6,7 +6,7 @@ const Create = () => {
     const [weather, setWeather] = useState('Sunny');
     const [body, setBody] = useState(``);
     const [plans, setPlans] = useState(``);
-    const date = new DateObject().format("YYYY-MM-DD");
+    const [date, setDate] = useState(new DateObject().format("YYYY-MM-DD"));
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -36,6 +36,7 @@ const Create = () => {
         <div className="edit-diary">
             <h2>Add New Diary</h2>
             <form onSubmit={ handleSubmit }>
+                Date: <input type="date" value={date} onChange={ (e) => setDate(e.target.value) } />
                 Weather: <select
                         required
                         value={weather}

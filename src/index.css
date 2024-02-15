@@ -126,6 +126,17 @@
 .edit-diary select,
 .edit-diary textarea {
   margin-bottom: 10px;
+  margin-top: 2px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  white-space: pre-wrap; /* Preserve white space and wrap lines */
+}
+
+.edit-diary input[type="date"] { /* Specific styling for date input */
+  margin-bottom: 10px;
+  margin-top: 2px;
   padding: 5px;
   border-radius: 3px;
   border: 1px solid #ccc;
